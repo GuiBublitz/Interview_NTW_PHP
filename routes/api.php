@@ -13,7 +13,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\CategoriaController;
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::resource('categorias', CategoriaController::class)->only([
+    'index', 'store', 'show', 'update', 'destroy'
+]);
+
+Route::resource('produtos', ProdutoController::class)->only([
+    'index', 'store', 'show', 'update', 'destroy'
+]);
