@@ -16,8 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('categoria_id');
             $table->string('codigo');
             $table->string('nome');
-            $table->float('preco', 8, 2);
-            $table->float('preco_promocional', 8, 2);
+            $table->decimal('preco', 8, 2);
+            $table->decimal('preco_promocional', 8, 2)->nullable();
             $table->boolean('ativo');
             $table->timestamps();
 
