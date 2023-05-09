@@ -25,4 +25,4 @@ If you don't want to set up the project for development, but only want to run th
 
 1. Download the project.
 2. Run `composer install` in the project directory to install the required dependencies.
-3. Run `php artisan test` to execute the test suite. 
+3. Run `php artisan test` to execute the test suite.  
